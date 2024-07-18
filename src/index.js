@@ -25,17 +25,7 @@ const SetUpAndStartServer = async () => {
         console.log("Heeyaa server started at port", PORT)
         await connect();
         console.log("MOngo db connected");
-        // const userRepo = new UserRepository();
-        // const user = await userRepo.create({
-        //     password: "agnish123",
-        //     name: "Agnish",
-        //     email: "agnish123"
-        // })
-        // console.log(user);
-        // const tweet = await Tweet.create({
-        //     content: "Hello World"
-        // })
-        // 
+
 
     });
 

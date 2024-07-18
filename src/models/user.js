@@ -28,10 +28,10 @@ UserSchema.pre('save', function (next) {
 })
 
 
-UserSchema.method.comparePassword = function compare(password) {
+UserSchema.methods.comparePassword = function compare(password) {
     return bcrypt.compareSync(password, this.password);
 }
-UserSchema.method.getJWT = function generate() {
+UserSchema.methods.getJWT = function generate() {
     return jwt.sign({ id: this._id, email: this.email },
         'twitter_secret', {
         expiresIn: '1h'

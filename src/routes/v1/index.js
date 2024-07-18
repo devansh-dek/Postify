@@ -10,7 +10,7 @@ router.post('/signup', signup)
 router.post('/login', login)
 router.post('/tweet', authenticate, createTweet)
 router.get('/tweets/:id', getTweet);
-router.post('/like/toggle', toggleLike);
-router.post('/comments', createComment);
+router.post('/like/toggle', authenticate, toggleLike);
+router.post('/comments', authenticate, createComment);
 
 export default router;

@@ -35,6 +35,7 @@ const login = async (req, res) => {
         });
     }
     catch (error) {
+        console.log("Error in login controller ", error);
         return res.status(500).json({
             msg: "Something went wrong",
             data: {},

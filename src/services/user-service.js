@@ -26,7 +26,9 @@ class UserService {
     }
     async signin(data) {
         try {
+            console.log("Data is ", data);
             const user = await this.getUserByEmail(data.email);
+            console.log("User is ", user);
             if (!user) {
                 throw {
                     message: 'no user found'
